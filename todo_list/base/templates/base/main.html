@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>To Do Items</title>
+    <meta name="description" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Open+Sans:wght@300&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: #fefefe ;
+            font-family: 'Source Sans Pro', sans-serif;
+            padding-top: 50px;
+
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: 'Open Sans', sans-serif;
+        }
+
+        a,
+        p {
+          color: #4b5156
+        }
+
+        .container{
+          max-width: 550px;
+          margin: auto;
+          background-color: #fff;
+          -webkit-box-shadow: 2px 2px 13px -4px rgba(0,0,0,0.21);
+          box-shadow: 2px 2px 13px -4px rgba(0,0,0,0.21);
+        }
+        </style>
+  </head>
+  <body>
+      <div class="container">
+          {% block content %}
+
+          {% endblock content %}
+
+
+  </body>
+</html>
