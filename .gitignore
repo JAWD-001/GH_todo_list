@@ -1,2 +1,3 @@
 todo_list/base/migrations
 venv
+todo_list/db.sqlite3

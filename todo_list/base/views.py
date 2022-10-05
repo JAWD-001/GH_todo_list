@@ -1,5 +1,3 @@
-from asyncio import tasks
-from audioop import reverse
 from django.shortcuts import redirect, render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
@@ -13,6 +11,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 
 from .models import Task
+from .forms import TaskForm
 
 
 # Create your views here.
@@ -69,13 +68,13 @@ class TaskDetail(LoginRequiredMixin, DetailView):
 
 class TaskCreate(LoginRequiredMixin, CreateView):
     model = Task
-    fields = ['title', 'task_description', 'task_due', 'task_completed']
+    form_class = TaskForm
+
     success_url = reverse_lazy('tasks')
 
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super(TaskCreate, self).form_valid(form)
-
+#    def form_valid(self, form):
+#        form.instance.user = self.request.user
+#        return super(TaskCreate, self).form_valid(form)
 
 class TaskUpdate(LoginRequiredMixin, UpdateView):
     model = Task

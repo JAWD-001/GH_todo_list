@@ -1,8 +1,6 @@
-from tkinter import Widget
-from xmlrpc.client import FastMarshaller
 from django.db import models
 from django.contrib.auth.models import User
-from django.forms import DateTimeField, ChoiceField
+from django.forms import DateTimeField, ChoiceField, widgets
 
 # Create your models here.
 class Task(models.Model):
